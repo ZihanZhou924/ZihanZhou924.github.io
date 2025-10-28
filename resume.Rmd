@@ -1,0 +1,22 @@
+---
+title: "Resume"
+output: html_document
+---
+
+## Education
+
+**Master of Science**  
+Biostatistics - 2025.09-Present - Columbia University 
+
+**Undergraduate**  
+Data Science - 2021.09-2025.06 - Fudan University
+
+## Experience
+
+- Research Assistant – analyzing health survey data using R
+- Teaching Assistant – introductory biostatistics
+
+## Skills
+- R, Python, SQL
+- Data visualization, regression modeling
+- Reproducible reporting (R Markdown, Quarto)

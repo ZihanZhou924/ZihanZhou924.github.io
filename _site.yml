@@ -1,0 +1,20 @@
+name: "My Website"
+navbar:
+  title: "Zihan Zhou"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+    - text: "Resume"
+      href: resume.html
+  right:
+    - icon: fa-github
+      href: "https://github.com/ZihanZhou924"
+    - icon: fa-envelope
+      href: "mailto:zihan.zhou2024@outlook.com"
+output_dir: "."
+output:
+  html_document:
+    theme: flatly
+    highlight: textmate
