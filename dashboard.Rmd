@@ -1,0 +1,125 @@
+---
+title: "NOAA Weather Dashboard - Homework 4"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(plotly)
+library(p8105.datasets)
+library(flexdashboard)
+library(lubridate)
+
+data("ny_noaa")
+
+noaa_df = ny_noaa |> 
+  drop_na(prcp, tmax, tmin) |> 
+  mutate(
+    tmax = as.numeric(tmax) / 10,
+    tmin = as.numeric(tmin) / 10,
+    prcp = as.numeric(prcp) / 10,
+    year = as.numeric(substr(date, 1, 4))
+  ) |> 
+  filter(year >= 2000, year <= 2010, prcp > 0) |> 
+  sample_n(5000)
+
+```
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+Scatterplot: Daily Min vs Max Temperature
+
+```{r}
+noaa_df |>
+  plot_ly(
+    x = ~tmin,
+    y = ~tmax,
+    type = "scatter",
+    mode = "markers",
+    color = ~prcp,
+    text = ~str_c("Date: ", date, "Precip: ", prcp, "mm"),
+    alpha = 0.6
+  ) |>
+  layout(
+    title = "Daily Min vs Max Temperature (colored by Precipitation)",
+    xaxis = list(title = "Min Temperature (°C)"),
+    yaxis = list(title = "Max Temperature (°C)")
+  )
+
+
+
+
+```
+
+Line Plot: Average Monthly Maximum Temperature
+
+```{r}
+monthly_temp = noaa_df |>
+  group_by(year, month = substr(date, 6, 7)) |>
+  summarize(mean_tmax = mean(tmax, na.rm = TRUE)) |>
+  mutate(month = as.numeric(month))
+
+monthly_temp |>
+  plot_ly(
+    x = ~month,
+    y = ~mean_tmax,
+    color = ~as.factor(year),
+    type = "scatter",
+    mode = "lines+markers"
+  ) |>
+  layout(
+    title = "Average Monthly Maximum Temperature (2000–2010)",
+    xaxis = list(title = "Month"),
+    yaxis = list(title = "Mean Max Temp (°C)")
+  )
+
+```
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+Boxplot: Distribution of Daily Precipitation by Month
+
+```{r}
+noaa_df |>
+  mutate(month = substr(date, 6, 7)) |>
+  plot_ly(
+    x = ~month,
+    y = ~prcp,
+    type = "box",
+    color = ~month,
+    colors = "viridis"
+  ) |>
+  layout(
+    title = "Distribution of Daily Precipitation by Month",
+    xaxis = list(title = "Month"),
+    yaxis = list(title = "Precipitation (mm)")
+  )
+
+
+
+```
+
+Bar Chart: Number of Observations per Month
+
+```{r}
+noaa_df |>
+  mutate(month = substr(date, 6, 7)) |>
+  count(month) |>
+  plot_ly(
+    x = ~month,
+    y = ~n,
+    type = "bar",
+    color = ~month
+  ) |>
+  layout(title = "Number of Observations per Month")
+
+```
+
+
+
+

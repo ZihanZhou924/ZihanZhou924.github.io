@@ -8,6 +8,9 @@ navbar:
       href: about.html
     - text: "Resume"
       href: resume.html
+    - text: "Dashboard"
+      href: dashboard.html
+
   right:
     - icon: fa-github
       href: "https://github.com/ZihanZhou924"
