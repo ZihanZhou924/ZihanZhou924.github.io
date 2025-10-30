@@ -3,8 +3,6 @@ title: "About Me"
 output: html_document
 ---
 
-## About Me
-
 I’m passionate about data visualization and reproducible research.  
 Here are a few things about me:
 
