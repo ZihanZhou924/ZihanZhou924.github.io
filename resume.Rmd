@@ -1,22 +1,80 @@
 ---
 title: "Resume"
-output: html_document
+output: 
+  html_document:
+    theme: cosmo
+    toc: false
+    highlight: textmate
+---
+
+<p class="small-text" style="text-align:center;">
+Email: <a href="mailto:Zihan.zhou2024@outlook.com">Zihan.zhou2024@outlook.com</a> |
+Tel: (86) 156-3710-7688 |
+Address: Fudan University, 220 Handan Road, Shanghai, China
+</p>
+
 ---
 
 ## Education
+**Fudan University, School of Data Science** — *Shanghai, China*  
+**Bachelor of Science in Data Science**, *expected graduation in Jul 2025*  
+- **Honors & Awards:** Outstanding Student Leader, Student Union of the School of Mathematics and Science (2023); “Freshmen” Scholarship in Fudan University (2021)  
+- **Relevant Coursework:** Sampling Survey (93/100), Physics (100/100), Principles of Computers (85/100), Merger and Acquisition (100/100)
 
-**Master of Science**  
-Biostatistics - 2025.09-Present - Columbia University 
+---
 
-**Undergraduate**  
-Data Science - 2021.09-2025.06 - Fudan University
+## Research Experience
 
-## Experience
+**Research Assistant**, Institute of Software, Fudan University — *Sep 2024–present*  
+*Research on key anti-money laundering technologies using a blockchain-based service network.*  
+- Investigated and extracted the blockchain characteristics of financial transactions.  
+- Constructed an RNN classification model based on neural network knowledge; trained the RNN model using time-series features from the Elliptic++ Database.  
+- Implemented the RNN model and successfully classified 95% of money laundering cases using transaction information; cross-validation and variance analysis indicated the RNN’s stability and effectiveness.
 
-- Research Assistant – analyzing health survey data using R
-- Teaching Assistant – introductory biostatistics
+**Research Assistant**, Institute of Mathematics and Statistics, Zhengzhou University — *Jun 2024–Sep 2024*  
+*“Single-machine scheduling for minimizing total weighted completion time of tardy jobs,” published in the European Journal of Operational Research.*  
+- Analyzed computational complexity of single-machine scheduling, considering restrictions on weights, due dates, or processing time using R.  
+- Proved scheduling problem “1|p_j=p|∑ω_j (C_j×U_j)” solvable in O(n³) time.  
+- Developed a branch-and-bound algorithm to create optimal schedules, arranging early jobs in EDD order and tardy jobs in SPT order.
+
+---
+
+## Projects
+
+**Team Leader**, SDS-AI 2023A Connect Four (Kaggle) — *Sep 2023–Jan 2024*  
+- Designed and trained an agent to select the column in which to place a checker.  
+- Optimized algorithm using Markov Decision Process and Monte Carlo Tree Search; improved winning rate from 40% → 80%.  
+- Scored 713.7 in the final match (average score 600).
+
+**Team Leader**, Database and Implementation, Fudan University — *May 2023–Jun 2023*  
+- Designed and optimized a database system for Chinese Super League data, supporting addition, deletion, and querying.  
+- Utilized SQL for data management and built a web interface linking all functional modules.
+
+---
+
+## Work Experience
+
+**Intern**, Beijing Advanced Digital Technology Co., Ltd. — *Jun 2024–Aug 2024*  
+*“DataOps: Empowering the Core Data Platform for Credit Cards to Redefine and Lead the Transformation into the Digital 3.0 Era,” published in Chinese Financial Computer.*  
+- Optimized new core data platform modules for platform management, batching, data bus, and real-time computing.  
+- Implemented second-level data synchronization and ensured metadata mapping consistency.
+
+**Intern**, Credit Card Center of China Minsheng Bank, Science & Technology Dept. — *Jul 2023–Aug 2023*  
+- Built an interface for sorting and batching email-based inquiries, reducing response time by 50%.  
+- Improved result visibility through pagination algorithms.
+
+---
+
+## Leadership & Volunteer Activities
+
+- **Community Outreach Coordinator**, Student Union, New Media Dept., Fudan University (Sep 2021–Jul 2022)  
+- **Treasurer**, Converged Media Center, Fudan University (Nov 2021–Jul 2022)  
+- **Red Cross Volunteer**, Zhengzhou, Henan Province (Jul 2021–present)  
+- **Welfare Officer**, Young Volunteer Program, Fudan University (Sep 2021–present)
+
+---
 
 ## Skills
-- R, Python, SQL
-- Data visualization, regression modeling
-- Reproducible reporting (R Markdown, Quarto)
+
+- **Programming Languages:** Python, C, C++, R, MATLAB, SQL, Microsoft Office  
+- **English Proficiency:** TOEFL 104; GRE 321 (Quant 170)

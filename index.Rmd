@@ -3,11 +3,11 @@ title: "Welcome to My Website"
 output: html_document
 ---
 
-## Hi, I'm Zihan Zhou 👋
+## Hi, I'm Zihan Zhou 
 
 I'm a student at Columbia University, interested in data science and epidemiology.
 
 This website showcases my coursework and projects.
 
-- 📧 Email: [zihan.zhou2024@outlook.com](mailto:zihan.zhou2024@outlook.com)
-- 💻 GitHub: [ZihanZhou924](https://github.com/ZihanZhou924)
+- Email: [zihan.zhou2024@outlook.com](mailto:zihan.zhou2024@outlook.com)
+- GitHub: [ZihanZhou924](https://github.com/ZihanZhou924)
